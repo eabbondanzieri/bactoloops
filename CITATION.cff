@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use Bactoloops, please cite the paper below."
+title: "Bactoloops: loop calling for circular bacterial Hi-C maps"
+type: software
+license: MIT
+repository-code: "https://github.com/eabbondanzieri/bactoloops"
+authors:
+  - family-names: Abbondanzieri
+    given-names: Elio A.
+  - family-names: Way
+    given-names: Lindsey E.
+  - family-names: Biteen
+    given-names: Julie S.
+  - family-names: Wang
+    given-names: Xindan
+preferred-citation:
+  type: article
+  title: "H-NS organizes genome-wide DNA looping linked to gene silencing in starved Escherichia coli"
+  authors:
+    - family-names: Way
+      given-names: Lindsey E.
+    - family-names: Abbondanzieri
+      given-names: Elio A.
+    - family-names: Biteen
+      given-names: Julie S.
+    - family-names: Wang
+      given-names: Xindan
+  notes: "Preprint: bioRxiv 2025.10.14.682352. Full author list in the paper."
+  doi: "10.1101/2025.10.14.682352"

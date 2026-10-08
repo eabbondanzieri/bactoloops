@@ -1,0 +1,12 @@
+# conda env create -f environment.yml && conda activate bactoloops
+name: bactoloops
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - scipy
+  - pandas
+  - tifffile
+  - numba
+  - matplotlib

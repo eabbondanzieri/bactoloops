@@ -1,0 +1,7 @@
+# tested with: numpy 2.4.6, scipy 1.17.1, pandas 3.0.6, tifffile, numba 0.67.0, matplotlib (Python 3.11-3.13)
+numpy
+scipy
+pandas
+tifffile
+numba
+matplotlib
