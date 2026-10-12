@@ -93,7 +93,7 @@ python tests/test_example.py
 
 If you use Bactoloops, please cite the software (all versions: doi:[10.5281/zenodo.23296823](https://doi.org/10.5281/zenodo.23296823); v1.0.0: doi:[10.5281/zenodo.23296824](https://doi.org/10.5281/zenodo.23296824)) and the paper:
 
-Way, L. E. *et al.* H-NS organizes genome-wide DNA looping linked to gene silencing in starved *Escherichia coli*.
+Way, L. E. *et al.* H-NS organizes genome-wide DNA looping and enhances gene silencing in starved *Escherichia coli*.
 bioRxiv 2025.10.14.682352 (2025); doi:10.1101/2025.10.14.682352.
 
 The analysis scripts for the paper are in [eabbondanzieri/HNS-Deep-Stationary-Bridging-2026](https://github.com/eabbondanzieri/HNS-Deep-Stationary-Bridging-2026).
