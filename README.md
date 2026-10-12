@@ -1,5 +1,7 @@
 # Bactoloops
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23296823.svg)](https://doi.org/10.5281/zenodo.23296823)
+
 Loop calling for Hi-C maps of circular bacterial chromosomes.
 
 Published loop callers (HiCCUPS, cooltools, Chromosight, Mustache, SIP, Peakachu, ...) were built for linear eukaryotic
@@ -89,7 +91,7 @@ python tests/test_example.py
 
 ## Citation
 
-If you use Bactoloops, please cite:
+If you use Bactoloops, please cite the software (all versions: doi:[10.5281/zenodo.23296823](https://doi.org/10.5281/zenodo.23296823); v1.0.0: doi:[10.5281/zenodo.23296824](https://doi.org/10.5281/zenodo.23296824)) and the paper:
 
 Way, L. E. *et al.* H-NS organizes genome-wide DNA looping linked to gene silencing in starved *Escherichia coli*.
 bioRxiv 2025.10.14.682352 (2025); doi:10.1101/2025.10.14.682352.

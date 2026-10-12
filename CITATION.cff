@@ -4,6 +4,7 @@ title: "Bactoloops: loop calling for circular bacterial Hi-C maps"
 type: software
 license: MIT
 repository-code: "https://github.com/eabbondanzieri/bactoloops"
+doi: "10.5281/zenodo.23296823"
 authors:
   - family-names: Abbondanzieri
     given-names: Elio A.
