@@ -22,6 +22,15 @@ Bactoloops comes in two equivalent versions:
 | `macro/Bactoloops.ijm` | ImageJ/Fiji macro (the reference implementation used in the paper) |
 | `python/bactoloops.py` | Python implementation, no ImageJ needed; reproduces the macro's calls |
 
+## System requirements
+
+- **Operating system:** any system that runs Fiji or Python 3.10 or later. Tested on macOS 26.4.1 (Apple M2 Max).
+- **Fiji macro:** Fiji with ImageJ 1.54p (tested); no plugins.
+- **Python:** Python 3.11 with numpy 2.4, scipy 1.17, pandas 3.0–3.1, tifffile 2026.3, numba 0.67–0.68, and matplotlib
+  3.11 (tested versions; `python/environment.yml` and `python/requirements.txt` list the packages).
+- **Hardware:** a standard desktop or laptop computer; no non-standard hardware. A 10-kb bacterial map (about 460 x 460
+  bins) needs about 1.5 GB of memory (1.4 GB peak in the demo).
+
 ## Installation
 
 **Fiji macro:** install [Fiji](https://fiji.sc); no plugins are needed. Open `macro/Bactoloops.ijm` in Fiji (Plugins >
@@ -34,8 +43,9 @@ conda env create -f python/environment.yml
 conda activate bactoloops
 ```
 
-or `pip install -r python/requirements.txt`. The first run compiles part of the code with numba (a few seconds); a
-461 x 461 map then takes about 20 seconds.
+or `pip install -r python/requirements.txt`. Typical install time on a normal desktop computer: 1–5 minutes (45 s on
+the test machine). The first run compiles part of the code with numba (about 25 s); a 461 x 461 map then takes about
+20 seconds.
 
 ## Input
 
@@ -79,15 +89,34 @@ Each file ends in the identifier you give:
 The tunable parameters are listed at the top of the macro and of `bactoloops.py` (same names and defaults). They were
 calibrated on 10-kb maps; `docs/macro_details.md` explains each step and how to run at other resolutions.
 
-## Example and test
+## Demo
 
 `example/ecoli_wt_96h_10kb.tif` is the *E. coli* wild-type deep-stationary-phase (96 h) map from the paper (average of two
-biological replicates, 10-kb bins, recentred at bin 368). `example/expected/` holds the macro's output for it (128
-loops). To check that the Python version reproduces the macro on your machine:
+biological replicates, 10-kb bins, recentred at bin 368). `example/expected/` holds the macro's output for it.
+
+**Run the demo** (Python):
 
 ```bash
 python tests/test_example.py
 ```
+
+This calls loops on the example map and compares them with `example/expected/`. **Expected output:** the run log,
+ending with
+
+```
+OK: 128 loops, identical positions and confidence; scores within 0.001 of the macro
+```
+
+**Expected run time:** about 20–50 s on a normal desktop computer (47 s on the first run, including numba compilation;
+22 s afterwards).
+
+**Run the demo** (Fiji): open `example/ecoli_wt_96h_10kb.tif`, run `macro/Bactoloops.ijm` with recenter bin 368 and bin
+size 10000; the outputs match the files in `example/expected/` (128 loops in `loop_calls_*.csv`).
+
+## Reproducing the paper
+
+The analysis scripts, with instructions for reproducing every quantitative result in the paper, are in
+[eabbondanzieri/HNS-Deep-Stationary-Bridging-2026](https://github.com/eabbondanzieri/HNS-Deep-Stationary-Bridging-2026).
 
 ## Citation
 
